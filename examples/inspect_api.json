@@ -1,0 +1,50 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "original.png"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "edited.png"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "allowed.png"
+    }
+  },
+  "4": {
+    "class_type": "EditFenceInspect",
+    "inputs": {
+      "original": [
+        "1",
+        0
+      ],
+      "edited": [
+        "2",
+        0
+      ],
+      "allowed_mask": [
+        "3",
+        1
+      ],
+      "pixel_tolerance": 0.02,
+      "max_outside_change_fraction": 0,
+      "boundary_radius": 3,
+      "mask_threshold": 0.01
+    }
+  },
+  "5": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "4",
+        0
+      ]
+    }
+  }
+}
